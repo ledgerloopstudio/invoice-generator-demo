@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Invoice Generator — LedgerLoopStudio</title>
+<title>Invoice Generator â LedgerLoopStudio</title>
 <style>
 /* ============================================================
-   LedgerLoopStudio — Invoice Generator
+   LedgerLoopStudio â Invoice Generator
    Single self-contained file. No internet required.
    ============================================================ */
 :root{
@@ -174,13 +174,13 @@ tbody tr:hover{background:#FAFCFC}
 .inv .accent{display:none}
 .inv .plabel{color:#8a96a0}
 
-/* 1 — Minimal: no fill, hairlines only */
+/* 1 â Minimal: no fill, hairlines only */
 .inv.s-minimal h1{font-weight:300;letter-spacing:5px;text-transform:uppercase;font-size:24px}
 .inv.s-minimal th{border-bottom:1px solid #222}
 .inv.s-minimal .tot .g{border-top:2px solid #222}
 .inv.s-minimal .plabel{color:var(--iv-accent)}
 
-/* 2 — Accent Bar: colour rule at the top, filled table header */
+/* 2 â Accent Bar: colour rule at the top, filled table header */
 .inv.s-accentbar h1{color:var(--iv-accent);font-weight:700}
 .inv.s-accentbar th{background:var(--iv-accent);color:#fff;border-bottom:0}
 .inv.s-accentbar .tot .g{
@@ -188,13 +188,13 @@ tbody tr:hover{background:#FAFCFC}
 }
 .inv.s-accentbar .accent{display:block;height:6px;background:var(--iv-accent);margin:-56px -56px 30px}
 
-/* 3 — Classic: formal, double rule */
+/* 3 â Classic: formal, double rule */
 .inv.s-classic h1{font-weight:400;letter-spacing:1px}
 .inv.s-classic th{border-bottom:1px solid #222;border-top:1px solid #222;background:#F7F5F0}
 .inv.s-classic .tot .g{border-top:3px double #222}
 .inv.s-classic .plabel{color:#5b6670;letter-spacing:1px}
 
-/* 4 — Compact: dense, fits long invoices on one page */
+/* 4 â Compact: dense, fits long invoices on one page */
 .inv.s-compact{font-size:12px}
 .inv.s-compact h1{font-size:21px;color:var(--iv-accent)}
 .inv.s-compact td,.inv.s-compact th{padding:6px 7px}
@@ -204,7 +204,7 @@ tbody tr:hover{background:#FAFCFC}
 .inv.s-compact .tot{width:250px}
 .inv.s-compact .tot .g{border-top:2px solid var(--iv-accent)}
 
-/* 5 — Bold Header: solid colour block across the top */
+/* 5 â Bold Header: solid colour block across the top */
 .inv.s-bold .accent{
   display:block;background:var(--iv-accent);margin:-56px -56px 32px;padding:34px 56px 30px;color:#fff
 }
@@ -216,7 +216,7 @@ tbody tr:hover{background:#FAFCFC}
 .inv.s-bold .tot .g{color:var(--iv-accent);border-top:2px solid var(--iv-accent)}
 .inv.s-bold .plabel{color:var(--iv-accent)}
 
-/* 6 — Editorial: airy, letterspaced display type */
+/* 6 â Editorial: airy, letterspaced display type */
 .inv.s-editorial h1{
   font-weight:400;font-size:44px;letter-spacing:-1px;line-height:1;color:var(--iv-accent)
 }
@@ -242,7 +242,7 @@ input[type=color]{
 }
 
 /* ============================================================
-   PRINT — only the invoice, nothing else
+   PRINT â only the invoice, nothing else
    ============================================================ */
 @media print{
   @page{size:A4;margin:14mm}
@@ -265,11 +265,12 @@ input[type=color]{
 .demo-banner a{color:#fff;text-decoration:underline}
 .demo-banner .x{position:absolute;right:10px;top:6px;background:none;border:none;color:#fff;font:inherit;cursor:pointer;opacity:.85;padding:4px 8px}
 .demo-banner .x:hover{opacity:1}
+.buildstamp{max-width:1180px;margin:0 auto;padding:4px 22px 30px;color:#8A9AA5;font-size:11px;letter-spacing:.04em;text-align:right}
 </style>
 </head>
 <body>
 
-<div class="demo-banner" id="demoBanner">DEMO — example data, add up to 15 of your own invoices and see whether it thinks the way you do. Nothing is saved permanently and it can reset any time. <a href="https://www.etsy.com/shop/LedgerLoopStudio" target="_blank" rel="noopener">Buy the full version</a> for your own unlimited, permanent copy.<button class="x" onclick="document.getElementById('demoBanner').style.display='none'" aria-label="Dismiss">✕</button></div>
+<div class="demo-banner" id="demoBanner">DEMO â example data, add up to 15 of your own invoices and see whether it thinks the way you do. Nothing is saved permanently and it can reset any time. <a href="https://www.etsy.com/shop/LedgerLoopStudio" target="_blank" rel="noopener">Buy the full version</a> for your own unlimited, permanent copy.<button class="x" onclick="document.getElementById('demoBanner').style.display='none'" aria-label="Dismiss">â</button></div>
 
 <div class="topbar">
   <div class="brand">
@@ -321,12 +322,12 @@ input[type=color]{
           <div class="row">
             <div class="field"><label>Template</label>
               <select id="f-style">
-                <option value="minimal">1 · Minimal</option>
-                <option value="accentbar" selected>2 · Accent Bar</option>
-                <option value="classic">3 · Classic</option>
-                <option value="compact">4 · Compact</option>
-                <option value="bold">5 · Bold Header</option>
-                <option value="editorial">6 · Editorial</option>
+                <option value="minimal">1 Â· Minimal</option>
+                <option value="accentbar" selected>2 Â· Accent Bar</option>
+                <option value="classic">3 Â· Classic</option>
+                <option value="compact">4 Â· Compact</option>
+                <option value="bold">5 Â· Bold Header</option>
+                <option value="editorial">6 Â· Editorial</option>
               </select>
             </div>
             <div class="field"><label>Font</label>
@@ -355,7 +356,7 @@ input[type=color]{
         <div class="body">
           <div class="field">
             <label>Pick a saved client</label>
-            <select id="f-client-pick"><option value="">— type below instead —</option></select>
+            <select id="f-client-pick"><option value="">â type below instead â</option></select>
           </div>
           <div class="field"><label>Client name</label><input type="text" id="f-cname"></div>
           <div class="row">
@@ -372,7 +373,7 @@ input[type=color]{
         <div class="body">
           <div class="field">
             <label>Add from your item list</label>
-            <select id="f-item-pick"><option value="">— choose an item —</option></select>
+            <select id="f-item-pick"><option value="">â choose an item â</option></select>
           </div>
           <div class="linebar mini">
             <div class="desc">Description</div><div class="qty">Qty</div>
@@ -477,7 +478,7 @@ input[type=color]{
     <h2>Log a payment</h2>
     <div class="body">
       <div class="row">
-        <div class="field"><label>Invoice</label><select id="p-inv"><option value="">— choose —</option></select></div>
+        <div class="field"><label>Invoice</label><select id="p-inv"><option value="">â choose â</option></select></div>
         <div class="field"><label>Date</label><input type="date" id="p-date"></div>
         <div class="field"><label>Amount</label><input type="number" id="p-amt" step="0.01" min="0"></div>
         <div class="field"><label>Method</label><input type="text" id="p-method" placeholder="Bank transfer"></div>
@@ -591,12 +592,12 @@ input[type=color]{
       <div class="row">
         <div class="field"><label>Template</label>
           <select id="s-style">
-            <option value="minimal">1 · Minimal</option>
-            <option value="accentbar">2 · Accent Bar</option>
-            <option value="classic">3 · Classic</option>
-            <option value="compact">4 · Compact</option>
-            <option value="bold">5 · Bold Header</option>
-            <option value="editorial">6 · Editorial</option>
+            <option value="minimal">1 Â· Minimal</option>
+            <option value="accentbar">2 Â· Accent Bar</option>
+            <option value="classic">3 Â· Classic</option>
+            <option value="compact">4 Â· Compact</option>
+            <option value="bold">5 Â· Bold Header</option>
+            <option value="editorial">6 Â· Editorial</option>
           </select>
         </div>
         <div class="field"><label>Font</label>
@@ -632,7 +633,7 @@ input[type=color]{
       <hr style="border:0;border-top:1px solid var(--line);margin:20px 0">
       <p style="margin:0 0 10px;font-weight:600">Send these invoices to the Invoice Tracker</p>
       <p style="margin:0 0 12px;color:var(--ink-soft)">
-        Exports a CSV shaped for the Invoices sheet of the LedgerLoopStudio Invoice Tracker —
+        Exports a CSV shaped for the Invoices sheet of the LedgerLoopStudio Invoice Tracker â
         paste it in and every invoice you've created here is already logged.
       </p>
       <div class="btnrow">
@@ -664,7 +665,7 @@ var DEMO_MODE = true, DEMO_INVOICE_LIMIT = 18; /* 3 seeded + 15 room to try addi
 function demoLimitReached(){
   if(!DEMO_MODE) return false;
   if(!DB || !DB.invoices || DB.invoices.length < DEMO_INVOICE_LIMIT) return false;
-  alert("You've reached the "+DEMO_INVOICE_LIMIT+"-invoice demo limit.\n\nThis is just a preview — buy the full version for unlimited invoices, all features unlocked, and your own permanent copy.");
+  alert("You've reached the "+DEMO_INVOICE_LIMIT+"-invoice demo limit.\n\nThis is just a preview â buy the full version for unlimited invoices, all features unlocked, and your own permanent copy.");
   return true;
 }
 
@@ -718,7 +719,7 @@ function daysBetween(a, b){
   return Math.round((db - da) / 86400000);
 }
 function fmtDate(iso){
-  if(!iso) return "—";
+  if(!iso) return "â";
   var p = iso.split("-");
   var mo = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
   return p[2].replace(/^0/,"") + " " + mo[(+p[1])-1] + " " + p[0];
@@ -739,7 +740,7 @@ function toast(msg){
 }
 
 /* ---------- templates, fonts, colours ---------- */
-/* Only fonts already present on the buyer's machine — nothing is downloaded,
+/* Only fonts already present on the buyer's machine â nothing is downloaded,
    so the invoice looks the same with the internet switched off. */
 var FONTS = {
   sans:     'Helvetica, Arial, "Helvetica Neue", sans-serif',
@@ -794,14 +795,14 @@ function load(){
 }
 function save(){
   try { localStorage.setItem(KEY, JSON.stringify(DB)); }
-  catch(e){ toast("Could not save — browser storage may be full or blocked."); }
+  catch(e){ toast("Could not save â browser storage may be full or blocked."); }
 }
 
 /* ============================================================
    CALCULATION ENGINE  (mirrored exactly in the workbook)
    ============================================================ */
 /* One line's amount, computed in whole cents so that a qty like 2.5 against a
-   rate of 33.33 gives 83.33 — what the buyer's own calculator says — rather than
+   rate of 33.33 gives 83.33 â what the buyer's own calculator says â rather than
    83.32, which is what raw floating-point multiplication produces. */
 function lineAmount(qty, rate){
   var cents = Math.round(num(rate) * 100);
@@ -836,7 +837,7 @@ function paidFor(invNo){
   return r2(p);
 }
 
-/* Status is never typed by hand — derived from dates and payments. */
+/* Status is never typed by hand â derived from dates and payments. */
 function statusOf(inv){
   var t = calcInvoice(inv).total;
   var paid = paidFor(inv.number);
@@ -943,7 +944,7 @@ function writeForm(){
   renderLines();
   $("editing-note").textContent =
     DB.invoices.some(function(i){ return i.id === cur.id; })
-      ? "Editing a saved invoice — Save updates it." : "";
+      ? "Editing a saved invoice â Save updates it." : "";
 }
 
 function renderLines(){
@@ -970,7 +971,7 @@ function renderLines(){
     a.appendChild(ai);
 
     var del = el("div","del");
-    var db = el("button","btn danger sm","×");
+    var db = el("button","btn danger sm","Ã");
     db.title = "Remove line";
     db.addEventListener("click", function(){
       readForm();
@@ -1026,7 +1027,7 @@ function renderPreview(){
     h += '<div class="accent"></div>';
   } else if(stl === "bold"){
     h += '<div class="accent"><div class="bh"><h1>INVOICE</h1><div class="bhno">'
-       + '<div>' + esc(cur.number || "—") + '</div>'
+       + '<div>' + esc(cur.number || "â") + '</div>'
        + '<div>Issued ' + fmtDate(cur.issue) + '</div>'
        + '<div>Due ' + fmtDate(cur.due) + '</div>'
        + '</div></div></div>';
@@ -1040,14 +1041,14 @@ function renderPreview(){
   var contact = [];
   if(s.email) contact.push(esc(s.email));
   if(s.phone) contact.push(esc(s.phone));
-  if(contact.length) h += '<div class="muted">' + contact.join(" &nbsp;·&nbsp; ") + '</div>';
+  if(contact.length) h += '<div class="muted">' + contact.join(" &nbsp;Â·&nbsp; ") + '</div>';
   h += '</div><div class="meta"><h1>INVOICE</h1>';
-  h += '<div class="muted">' + esc(cur.number || "—") + '</div>';
+  h += '<div class="muted">' + esc(cur.number || "â") + '</div>';
   h += '<div style="margin-top:12px"><b>Issued</b> ' + fmtDate(cur.issue) + '</div>';
   h += '<div><b>Due</b> ' + fmtDate(cur.due) + '</div>';
   h += '</div></div>';
 
-  /* Status stamp — rendered beside the amount due so it survives every template,
+  /* Status stamp â rendered beside the amount due so it survives every template,
      including Bold Header, which hides the meta column. */
   var stamp = "";
   if(st.status === "Paid")
@@ -1074,7 +1075,7 @@ function renderPreview(){
     h += '<tr><td colspan="4" class="muted" style="padding:22px 8px">No line items yet.</td></tr>';
   } else {
     lines.forEach(function(l){
-      h += '<tr><td>' + (esc(l.desc) || '<span class="muted">—</span>') + '</td>'
+      h += '<tr><td>' + (esc(l.desc) || '<span class="muted">â</span>') + '</td>'
          + '<td class="r">' + (num(l.qty) % 1 === 0 ? num(l.qty) : num(l.qty).toFixed(2)) + '</td>'
          + '<td class="r">' + money(l.rate) + '</td>'
          + '<td class="r">' + money(lineAmount(l.qty, l.rate)) + '</td></tr>';
@@ -1137,7 +1138,7 @@ function renderInvoiceList(){
 
     var tr = el("tr");
     tr.appendChild(el("td", null, iv.number));
-    tr.appendChild(el("td", null, (iv.client && iv.client.name) ? iv.client.name : "—"));
+    tr.appendChild(el("td", null, (iv.client && iv.client.name) ? iv.client.name : "â"));
     tr.appendChild(el("td", null, fmtDate(iv.issue)));
     tr.appendChild(el("td", null, fmtDate(iv.due)));
     tr.appendChild(el("td","num", money(st.total)));
@@ -1208,12 +1209,12 @@ function renderInvoiceList(){
 
 function renderPayments(){
   var sel = $("p-inv"), keep = sel.value;
-  sel.innerHTML = '<option value="">— choose —</option>';
+  sel.innerHTML = '<option value="">â choose â</option>';
   DB.invoices.forEach(function(iv){
     var st = statusOf(iv);
     var o = el("option");
     o.value = iv.number;
-    o.textContent = iv.number + " · " + ((iv.client && iv.client.name) || "—") + " · " + money(st.balance) + " due";
+    o.textContent = iv.number + " Â· " + ((iv.client && iv.client.name) || "â") + " Â· " + money(st.balance) + " due";
     sel.appendChild(o);
   });
   sel.value = keep;
@@ -1226,7 +1227,7 @@ function renderPayments(){
     tr.appendChild(el("td", null, fmtDate(p.date)));
     tr.appendChild(el("td", null, p.invNo));
     tr.appendChild(el("td","num", money(p.amount)));
-    tr.appendChild(el("td", null, p.method || "—"));
+    tr.appendChild(el("td", null, p.method || "â"));
     var d = el("td");
     var x = el("button","btn danger sm","Remove");
     x.addEventListener("click", function(){
@@ -1252,9 +1253,9 @@ function renderClients(){
     });
     var tr = el("tr");
     tr.appendChild(el("td", null, c.name));
-    tr.appendChild(el("td", null, c.email || "—"));
-    tr.appendChild(el("td", null, c.phone || "—"));
-    tr.appendChild(el("td", null, c.address || "—"));
+    tr.appendChild(el("td", null, c.email || "â"));
+    tr.appendChild(el("td", null, c.phone || "â"));
+    tr.appendChild(el("td", null, c.address || "â"));
     tr.appendChild(el("td","num", money(billed)));
     var ot = el("td","num", money(outst));
     if(outst > 0.005) ot.style.color = "var(--amber)";
@@ -1272,7 +1273,7 @@ function renderClients(){
   $("tbl-cl").style.display   = DB.clients.length ? "" : "none";
 
   var sel = $("f-client-pick");
-  sel.innerHTML = '<option value="">— type below instead —</option>';
+  sel.innerHTML = '<option value="">â type below instead â</option>';
   DB.clients.forEach(function(c){
     var o = el("option"); o.value = c.id; o.textContent = c.name;
     sel.appendChild(o);
@@ -1299,10 +1300,10 @@ function renderItems(){
   $("tbl-it").style.display   = DB.items.length ? "" : "none";
 
   var sel = $("f-item-pick");
-  sel.innerHTML = '<option value="">— choose an item —</option>';
+  sel.innerHTML = '<option value="">â choose an item â</option>';
   DB.items.forEach(function(it){
     var o = el("option"); o.value = it.id;
-    o.textContent = it.desc + " · " + money(it.rate);
+    o.textContent = it.desc + " Â· " + money(it.rate);
     sel.appendChild(o);
   });
 }
@@ -1435,7 +1436,7 @@ function exportPaymentsCSV(){
    WIRE UP
    ============================================================ */
 function bind(){
-  /* terms → due date */
+  /* terms â due date */
   $("f-terms").addEventListener("change", function(){
     var t = $("f-terms").value;
     if(t !== ""){ $("f-due").value = addDays($("f-issue").value, t); }
@@ -1475,7 +1476,7 @@ function bind(){
     refreshBuild();
   });
 
-  /* pick item → add as a line */
+  /* pick item â add as a line */
   $("f-item-pick").addEventListener("change", function(){
     var it = DB.items.filter(function(x){ return x.id === $("f-item-pick").value; })[0];
     if(!it) return;
@@ -1526,7 +1527,7 @@ function bind(){
       }
     }
     save(); renderAll();
-    $("editing-note").textContent = "Saved. Editing this invoice — Save updates it.";
+    $("editing-note").textContent = "Saved. Editing this invoice â Save updates it.";
     toast(isNew ? "Invoice saved" : "Invoice updated");
   });
 
@@ -1595,7 +1596,7 @@ function bind(){
   $("s-logo").addEventListener("change", function(e){
     var f = e.target.files && e.target.files[0];
     if(!f) return;
-    if(f.size > 600000){ toast("That image is large — try one under 200 KB"); }
+    if(f.size > 600000){ toast("That image is large â try one under 200 KB"); }
     var fr = new FileReader();
     fr.onload = function(){
       DB.settings.logo = fr.result;
@@ -1650,7 +1651,7 @@ function bind(){
 }
 
 /* ============================================================
-   SAMPLE DATA — only on a completely fresh install
+   SAMPLE DATA â only on a completely fresh install
    ============================================================ */
 function seedIfEmpty(){
   var raw = null;
@@ -1675,10 +1676,10 @@ function seedIfEmpty(){
 
   DB.items = [
     {id:uid(), desc:"Brand identity design",       rate:1200},
-    {id:uid(), desc:"Website design — per page",   rate:280},
-    {id:uid(), desc:"Consulting — hourly",         rate:85},
+    {id:uid(), desc:"Website design â per page",   rate:280},
+    {id:uid(), desc:"Consulting â hourly",         rate:85},
     {id:uid(), desc:"Monthly retainer",            rate:900},
-    {id:uid(), desc:"Copywriting — per 1000 words",rate:220}
+    {id:uid(), desc:"Copywriting â per 1000 words",rate:220}
   ];
 
   var d0 = today();
@@ -1697,10 +1698,10 @@ function seedIfEmpty(){
   DB.invoices = [
     mk("INV-001", DB.clients[0], -52, 30, [
       {desc:"Brand identity design", qty:1, rate:1200},
-      {desc:"Consulting — hourly",   qty:6, rate:85}
+      {desc:"Consulting â hourly",   qty:6, rate:85}
     ], 0),
     mk("INV-002", DB.clients[1], -20, 14, [
-      {desc:"Website design — per page", qty:5, rate:280}
+      {desc:"Website design â per page", qty:5, rate:280}
     ], 0, "pct", 10, "bold"),
     mk("INV-003", DB.clients[2], -4, 30, [
       {desc:"Monthly retainer", qty:1, rate:900}
@@ -1727,5 +1728,6 @@ renderAll();
 writeForm();
 refreshBuild();
 </script>
+<div class="buildstamp noprint">Invoice Generator &middot; build 2026-09-18 &middot; LedgerLoopStudio</div>
 </body>
 </html>
